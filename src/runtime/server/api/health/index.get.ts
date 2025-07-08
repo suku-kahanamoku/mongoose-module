@@ -2,7 +2,7 @@ import type { H3Event } from "h3";
 import { defineEventHandler, getQuery } from "#imports";
 import mongoose from "mongoose";
 
-import { CONNECT_WITH_RETRY } from "../../../utils";
+import { CONNECT_WITH_RETRY } from "../../utils";
 
 /**
  * @file index.get.ts
