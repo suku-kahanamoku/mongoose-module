@@ -10,6 +10,10 @@
       "types": "./dist/types.d.mts",
       "import": "./dist/module.mjs"
     },
+    "./types": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/types.d.mts"
+    },
     "./server-utils": {
       "types": "./dist/runtime/server/utils/index.d.ts",
       "import": "./dist/runtime/server/utils/index.js"
