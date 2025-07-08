@@ -1,6 +1,6 @@
 {
   "name": "@suku-kahanamoku/mongoose-module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Mongoose module",
   "repository": "@suku-kahanamoku/mongoose-module",
   "license": "MIT",
