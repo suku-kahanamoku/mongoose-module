@@ -1,7 +1,5 @@
-import MyModule from '../../../src/module'
+import MongooseModule from "../../../src/module";
 
 export default defineNuxtConfig({
-  modules: [
-    MyModule,
-  ],
-})
+  modules: [MongooseModule],
+});
