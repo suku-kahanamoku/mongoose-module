@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v1.0.9
+
+[compare changes](https://undefined/undefined/compare/v1.0.8...v1.0.9)
+
+### 🏡 Chore
+
+- **release:** V1.0.8 (7dd6964)
+- Update dependencies (875accb)
+
+### ❤️ Contributors
+
+- Suche Kahanamoku <sukusovi@gmail.com>
+- Suku-kahanamoku <sukusovi@gmail.com>
+
 ## v1.0.8
 
 [compare changes](https://undefined/undefined/compare/v1.0.7...v1.0.8)
