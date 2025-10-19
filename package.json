@@ -1,8 +1,11 @@
 {
   "name": "@suku-kahanamoku/mongoose-module",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Mongoose module",
-  "repository": "@suku-kahanamoku/mongoose-module",
+  "repository": {
+    "type": "git",
+    "url": "@suku-kahanamoku/mongoose-module"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -27,7 +30,7 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build build --failOnWarn=false",
+    "prepack": "nuxt-module-build build",
     "dev": "npm run dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
