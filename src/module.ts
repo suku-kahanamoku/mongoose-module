@@ -46,9 +46,17 @@ export default defineNuxtModule<ModuleOptions>({
     addServerPlugin(resolve("./runtime/server/plugins/mongoose"));
 
     // Generování API endpointů pro kontrolu zdraví
-    const apiDir = resolve("./runtime/server/api/health");
-    fs.readdirSync(apiDir)?.forEach((file) => {
+    const healthApiDir = resolve("./runtime/server/api/health");
+    fs.readdirSync(healthApiDir)?.forEach((file) => {
       GENERATE_API_ENDPOINT(file, "/api/health", resolve);
     });
+
+    // Generování API endpointů pro enum CRUD
+    const enumApiDir = resolve("./runtime/server/api/admin/enum");
+    if (fs.existsSync(enumApiDir)) {
+      fs.readdirSync(enumApiDir)?.forEach((file) => {
+        GENERATE_API_ENDPOINT(file, "/api/admin/enum", resolve);
+      });
+    }
   },
 });
