@@ -2,8 +2,8 @@ import type { H3Event } from "h3";
 import { defineEventHandler, getQuery, readBody, createError } from "#imports";
 
 import { RESOLVE_FACTORY } from "@suku-kahanamoku/common-module/server-utils";
-import { GET_STATUS, CONNECT_WITH_RETRY } from "../../../../utils";
 
+import { GET_STATUS, CONNECT_WITH_RETRY } from "../../../../utils";
 import { EnumModel } from "../../../../../models/enum.schema";
 import type { IEnumResponse } from "../../../../../types";
 
@@ -41,17 +41,17 @@ export default defineEventHandler(
     const result = await EnumModel.findOneAndUpdate(
       { _id: event.context.params?.id },
       body,
-      { new: true },
-    )
-    const enumObject = result?.toObject()
+      { new: true }
+    );
+    const enumObject = result?.toObject();
 
     if (enumObject) {
-      RESOLVE_FACTORY(enumObject, query.factory)
+      RESOLVE_FACTORY(enumObject, query.factory);
     }
 
     return {
       data: enumObject,
       meta: { total: enumObject ? 1 : 0 },
-    }
+    };
   }
 );
