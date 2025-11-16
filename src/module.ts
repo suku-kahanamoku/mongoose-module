@@ -63,7 +63,7 @@ export default defineNuxtModule<ModuleOptions>({
     const enumIdApiDir = resolve("./runtime/server/api/admin/enum/[_id]");
     if (fs.existsSync(enumIdApiDir)) {
       fs.readdirSync(enumIdApiDir)?.forEach((file) => {
-        GENERATE_API_ENDPOINT(file, "/api/admin/enum/[_id]", resolve);
+        GENERATE_API_ENDPOINT(file, "/api/admin/enum", resolve, "[_id]");
       });
     }
 
@@ -73,7 +73,7 @@ export default defineNuxtModule<ModuleOptions>({
     );
     if (fs.existsSync(enumItemsApiDir)) {
       fs.readdirSync(enumItemsApiDir)?.forEach((file) => {
-        GENERATE_API_ENDPOINT(file, "/api/admin/enum/[_id]/[_id]", resolve);
+        GENERATE_API_ENDPOINT(file, "/api/admin/enum", resolve, "[_id]/[_id]");
       });
     }
   },
