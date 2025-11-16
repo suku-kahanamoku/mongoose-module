@@ -1,6 +1,6 @@
 {
   "name": "@suku-kahanamoku/mongoose-module",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Mongoose module",
   "repository": {
     "type": "git",
@@ -12,6 +12,14 @@
     ".": {
       "types": "./dist/types.d.mts",
       "import": "./dist/module.mjs"
+    },
+    "./types": {
+      "types": "./dist/runtime/types/index.d.ts",
+      "import": "./dist/runtime/types/index.js"
+    },
+    "./models": {
+      "types": "./dist/runtime/models/index.d.ts",
+      "import": "./dist/runtime/models/index.js"
     },
     "./server-utils": {
       "types": "./dist/runtime/server/utils/index.d.ts",
