@@ -58,5 +58,23 @@ export default defineNuxtModule<ModuleOptions>({
         GENERATE_API_ENDPOINT(file, "/api/admin/enum", resolve);
       });
     }
+
+    // Generování API endpointů pro [_id] v enum
+    const enumIdApiDir = resolve("./runtime/server/api/admin/enum/[_id]");
+    if (fs.existsSync(enumIdApiDir)) {
+      fs.readdirSync(enumIdApiDir)?.forEach((file) => {
+        GENERATE_API_ENDPOINT(file, "/api/admin/enum/[_id]", resolve);
+      });
+    }
+
+    // Generování API endpointů pro [_id]/[_id] v enum (items)
+    const enumItemsApiDir = resolve(
+      "./runtime/server/api/admin/enum/[_id]/[_id]"
+    );
+    if (fs.existsSync(enumItemsApiDir)) {
+      fs.readdirSync(enumItemsApiDir)?.forEach((file) => {
+        GENERATE_API_ENDPOINT(file, "/api/admin/enum/[_id]/[_id]", resolve);
+      });
+    }
   },
 });
