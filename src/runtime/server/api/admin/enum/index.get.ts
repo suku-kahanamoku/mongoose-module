@@ -4,8 +4,8 @@ import { defineEventHandler, getQuery } from "#imports";
 import { GET_STATUS, CONNECT_WITH_RETRY } from "../../../utils";
 import { RESOLVE_FACTORY } from "@suku-kahanamoku/common-module/server-utils";
 
-import { EnumModel } from "../../../models/enum.schema";
-import type { IEnumsResponse } from "../../../types";
+import { EnumModel } from "../../../../models/enum.schema";
+import type { IEnumsResponse } from "../../../../types";
 
 export default defineEventHandler(
   async (event: H3Event): Promise<IEnumsResponse> => {

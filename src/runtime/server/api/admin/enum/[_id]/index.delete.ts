@@ -4,8 +4,8 @@ import { defineEventHandler, getQuery } from "#imports";
 import { RESOLVE_FACTORY } from "@suku-kahanamoku/common-module/server-utils";
 import { GET_STATUS, CONNECT_WITH_RETRY } from "../../../../utils";
 
-import { EnumModel } from "../../../../models/enum.schema";
-import type { IEnumResponse } from "../../../../types";
+import { EnumModel } from "../../../../../models/enum.schema";
+import type { IEnumResponse } from "../../../../../types";
 
 export default defineEventHandler(
   async (event: H3Event): Promise<IEnumResponse> => {
@@ -20,7 +20,10 @@ export default defineEventHandler(
       _id: event.context.params?.id,
     });
     const result = enumItem?.toObject();
-    RESOLVE_FACTORY(result, query.factory);
+
+    if (result) {
+      RESOLVE_FACTORY(result, query.factory);
+    }
 
     return {
       data: result,
