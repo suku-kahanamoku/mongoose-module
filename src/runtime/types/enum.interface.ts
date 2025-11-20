@@ -1,4 +1,4 @@
-import type { IResponse } from "@suku-kahanamoku/common-module/types";
+import type { IItem, IResponse } from "@suku-kahanamoku/common-module/types";
 
 export interface IEnumItem {
   syscode: string;
@@ -9,8 +9,7 @@ export interface IEnumItem {
   raw?: any;
 }
 
-export interface IEnum {
-  _id?: string;
+export interface IEnum extends IItem {
   syscode: string;
   name?: string;
   description?: string;
